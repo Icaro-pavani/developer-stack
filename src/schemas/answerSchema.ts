@@ -1,5 +1,7 @@
 import Joi from "joi";
-import { CreateAnswerData } from "../services/answerService.js";
+import { CreateAnswers } from "../repositories/answerRepository";
+
+type CreateAnswerData = Omit<CreateAnswers, "questionId">;
 
 export const answerSchema = Joi.object<CreateAnswerData>({
   answer: Joi.string().required(),

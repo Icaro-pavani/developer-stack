@@ -1,6 +1,6 @@
 import Joi from "joi";
-import { CreateQuestionData } from "../services/questionService.js";
+import { CreateQuestion } from "../repositories/questionRepository";
 
-export const questionSchema = Joi.object<CreateQuestionData>({
-  question: Joi.string().required()
+export const questionSchema = Joi.object<CreateQuestion>({
+  question: Joi.string().required(),
 });

@@ -1,3 +1,9 @@
+import * as answerRepository from "../repositories/answerRepository.js";
+
 // TODO
-const answerService = {};
+async function addAnswer(answerInfo: answerRepository.CreateAnswers) {
+  await answerRepository.insert(answerInfo);
+}
+
+const answerService = { addAnswer };
 export default answerService;
